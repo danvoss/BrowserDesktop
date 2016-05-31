@@ -29,4 +29,16 @@ public class Controller {
         }
     }
 
+    public void onBack() {
+        try {
+            view.getEngine().getHistory().go(-1);
+        } catch (Exception e) {}
+    }
+
+    public void onForward() {
+        try {
+            view.getEngine().getHistory().go(1);
+        } catch (Exception e) {
+        }
+    }
 }
